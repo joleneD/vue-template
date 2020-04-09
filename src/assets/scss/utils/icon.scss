@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+//-------------------
+// fonticon
+//-------------------
+@font-face {
+  font-family: "iconfont";
+}
+
+.icon,
+[class^="icon-"] {
+  
+}
+
+.icon-pulse {
+  animation: rotate-spin 1s infinite steps(7);
+}
+
+.icon-spin {
+  animation: rotate-spin 2s infinite linear;
+}
+
+@keyframes rotate-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(359deg);
+  }
+}
+
+.icon-add:before { content: "\e629"; }
+.icon {
+  /* 通过设置 font-size 来改变图标大小 */
+  width: 1em; height: 1em;
+  /* 图标和文字相邻时，垂直对齐 */
+  vertical-align: -0.15em;
+  /* 通过设置 color 来改变 SVG 的颜色/fill */
+  fill: currentColor;
+  /* path 和 stroke 溢出 viewBox 部分在 IE 下会显示
+     normalize.css 中也包含这行 */
+  overflow: hidden;
+}
